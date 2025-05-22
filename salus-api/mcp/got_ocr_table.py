@@ -240,8 +240,8 @@ def main():
     print("正在初始化GOT-OCR 2.0表格识别工具...")
     
     # 下载辅助文件（如果需要）
-    if not Path("notebook_utils.py").exists() or not Path("pip_helper.py").exists():
-        download_helper_files()
+    # if not Path("notebook_utils.py").exists() or not Path("pip_helper.py").exists():
+    #     download_helper_files()
     
     # 导入必要的库
     from transformers import AutoProcessor
