@@ -1,7 +1,7 @@
 <template>
     <div class="dashboard-container">
       <div class="page-header">
-        <h2>康复训练仪表盘</h2>
+  
         <el-select v-model="selectedCycle" placeholder="选择康复周期" @change="fetchStats">
           <el-option
             v-for="cycle in cycles"

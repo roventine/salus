@@ -63,7 +63,7 @@ def get_tasks():
     if where_clauses:
         query += ' WHERE ' + ' AND '.join(where_clauses)
     
-    query += ' ORDER BY t.scheduled_time'
+    query += ' ORDER BY t.specific_date'
     
     cursor.execute(query, params)
     tasks = [dict(row) for row in cursor.fetchall()]

@@ -14,24 +14,20 @@
           active-text-color="#409EFF"
         >
           <el-menu-item index="/">
-            <i class="el-icon-s-home"></i>
+            <el-icon><House /></el-icon>
             <span>首页</span>
           </el-menu-item>
-          <el-menu-item index="/dashboard">
-            <i class="el-icon-s-marketing"></i>
-            <span>仪表盘</span>
-          </el-menu-item>
+          <el-menu-item index="/cycles">
+            <el-icon><RefreshRight /></el-icon>
+            <span>康复周期</span>
+          </el-menu-item>          
           <el-menu-item index="/tasks">
-            <i class="el-icon-date"></i>
+            <el-icon><Calendar /></el-icon>
             <span>训练任务</span>
           </el-menu-item>
           <el-menu-item index="/exercises">
             <el-icon><Aim /></el-icon>
             <span>运动配置</span>
-          </el-menu-item>
-          <el-menu-item index="/cycles">
-            <el-icon><RefreshRight /></el-icon>
-            <span>康复周期</span>
           </el-menu-item>
           <el-menu-item index="/timer">
             <el-icon><Timer /></el-icon>
@@ -42,7 +38,7 @@
       <el-container>
         <el-header height="60px">
           <div class="header-content">
-            <h1>术后康复训练管理系统</h1>
+            <h1>术后康复助手</h1>
           </div>
         </el-header>
         <el-main>

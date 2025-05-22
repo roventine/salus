@@ -1,7 +1,7 @@
 <template>
   <div class="tasks-container">
     <div class="page-header">
-      <h2>训练任务管理</h2>
+      <h2>训练任务</h2>
       <div class="header-actions">
         <el-select v-model="selectedCycle" placeholder="选择康复周期" @change="fetchTasks">
           <el-option
@@ -31,6 +31,11 @@
     </div>
     
     <el-table :data="tasks" style="width: 100%" v-loading="loading">
+      <el-table-column label="日期" width="120">
+        <template #default="scope">
+          {{ scope.row.specific_date }}
+        </template>
+      </el-table-column>    
       <el-table-column label="星期" width="80">
         <template #default="scope">
           {{ getDayOfWeekLabel(scope.row.day_of_week) }}

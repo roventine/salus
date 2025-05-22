@@ -1,7 +1,7 @@
 <template>
   <div class="cycles-container">
     <div class="page-header">
-      <h2>康复周期管理</h2>
+      <h2>康复周期</h2>
       <el-button type="primary" @click="openDialog()">
         新建康复周期
       </el-button>
@@ -17,7 +17,7 @@
         </template>
       </el-table-column>
       <el-table-column prop="notes" label="备注" show-overflow-tooltip />
-      <el-table-column label="操作" width="250">
+      <el-table-column label="操作" width="350">
         <template #default="scope">
           <el-button type="primary" size="small" @click="viewTasks(scope.row)">
             查看任务
@@ -105,9 +105,9 @@
         >
           <el-form-item label="配置时间段" required>
             <el-row :gutter="10">
-              <el-col :span="11">
+              <el-col :span="22">
                 <el-form-item prop="start_week">
-                  <el-select v-model="batchForm.start_week" placeholder="开始周">
+                  <el-select v-model="batchForm.start_week" placeholder="开始周" >
                     <el-option
                       v-for="week in weekOptions"
                       :key="week.value"
@@ -118,9 +118,9 @@
                 </el-form-item>
               </el-col>
               <el-col :span="2" class="text-center">至</el-col>
-              <el-col :span="11">
+              <el-col :span="22">
                 <el-form-item prop="end_week">
-                  <el-select v-model="batchForm.end_week" placeholder="结束周">
+                  <el-select v-model="batchForm.end_week" placeholder="结束周" >
                     <el-option
                       v-for="week in weekOptions"
                       :key="week.value"

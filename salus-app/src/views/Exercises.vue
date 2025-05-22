@@ -1,9 +1,9 @@
 <template>
   <div class="exercises-container">
     <div class="page-header">
-      <h2>运动类型管理</h2>
+      <h2>运动管理</h2>
       <el-button type="primary" @click="openDialog()">
-        新建运动类型
+        新建运动
       </el-button>
     </div>
     
@@ -12,7 +12,7 @@
       <el-table-column prop="duration_sec" label="运动时长(秒)" width="120" />
       <el-table-column prop="rest_sec" label="休息时长(秒)" width="120" />
       <el-table-column prop="description" label="描述" show-overflow-tooltip />
-      <el-table-column label="操作" width="200">
+      <el-table-column label="操作" width="300">
         <template #default="scope">
           <el-button type="primary" size="small" @click="openTimerDialog(scope.row)">
             计时器
